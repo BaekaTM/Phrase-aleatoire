@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>TITRE</title>
+    </head>
+
+    <body>
+        <style>
+            body {
+                font-weight: bolder;
+                text-align: center;
+                overflow: hidden;
+                background: #000000;
+		    }
+            #sa
+            {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: rgb(240, 0, 0);
+                text-align: center;
+                font-size: 40px;
+                padding-top: 250px;
+            }
+            #encore
+            {
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                color: rgb(0, 153, 255);
+                text-align: center;
+                font-size: 50px;
+                padding-top: 50px; 
+                border: 2px rgb(0, 153, 255) solid;
+                border-radius: 6px / 6px;
+                width: 20%;
+                margin: auto;
+            }
+        </style>
+        <p id = "sa"></p>
+        <p onclick="window.location.reload()" id="encore">ENCORE !!</p>
+        <script>
+            var sujet = ["Jelane", "Le monsieur","La dame", "Le chien", "Ta mere"];
+            var verbe = ["joue", "mange", "tue", "saute"];
+            var compl = ["le chat", "du gateau", "la marelle", "du pont"];
+
+            function rand(tableau){
+                return tableau[Math.floor(Math.random() * tableau.length)];
+            }
+
+            var phraseAll = rand(sujet).toUpperCase() + " " + rand(verbe).toUpperCase() + " " + rand(compl).toUpperCase();
+
+            document.getElementById("sa").innerHTML = phraseAll;
+        </script>
+    </body>
+</html>
